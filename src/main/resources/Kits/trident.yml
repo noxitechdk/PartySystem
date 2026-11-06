@@ -1,0 +1,128 @@
+# Kit til /party kit trident
+# Filnavnet (uden .yml) er kittets navn i kommandoen. Rediger frit - brug /party reload bagefter.
+#
+# slot: 0-8 = hotbar, 9-35 = inventory, eller helmet / chestplate / leggings / boots / offhand
+# material: Minecraft-material. fallback (valgfri) bruges hvis materialet ikke findes på serveren.
+# icon (valgfri): materiale der vises i /party menu. Uden icon bruges kittets første item.
+# amount, name og lore (MiniMessage), enchantments (navn: niveau), potion (fx strong_healing), unbreakable
+display-name: "<blue>Trident"
+icon: TRIDENT
+items:
+- slot: 0
+  material: NETHERITE_SWORD
+  enchantments:
+    mending: 1
+    sharpness: 5
+    unbreaking: 3
+- slot: 1
+  material: TRIDENT
+  enchantments:
+    impaling: 5
+    loyalty: 3
+    mending: 1
+    unbreaking: 3
+- slot: 2
+  material: TRIDENT
+  enchantments:
+    impaling: 5
+    mending: 1
+    riptide: 3
+    unbreaking: 3
+- slot: 3
+  material: WATER_BUCKET
+- slot: 4
+  material: ENDER_PEARL
+  amount: 16
+- slot: 5
+  material: GOLDEN_APPLE
+  amount: 64
+- slot: 6
+  material: SPLASH_POTION
+  potion: strong_healing
+- slot: 7
+  material: SPLASH_POTION
+  potion: strong_healing
+- slot: 8
+  material: SHIELD
+  enchantments:
+    mending: 1
+    unbreaking: 3
+- slot: 9
+  material: WATER_BUCKET
+- slot: 10
+  material: ENDER_PEARL
+  amount: 16
+- slot: 11
+  material: ENDER_PEARL
+  amount: 16
+- slot: 12
+  material: TOTEM_OF_UNDYING
+- slot: 13
+  material: TOTEM_OF_UNDYING
+- slot: 14
+  material: TOTEM_OF_UNDYING
+- slot: 15
+  material: TOTEM_OF_UNDYING
+- slot: 16
+  material: COOKED_BEEF
+  amount: 64
+- slot: 17
+  material: NETHERITE_AXE
+  enchantments:
+    efficiency: 5
+    mending: 1
+    sharpness: 5
+    unbreaking: 3
+- slot: 18
+  material: SPLASH_POTION
+  potion: strong_healing
+- slot: 19
+  material: SPLASH_POTION
+  potion: strong_healing
+- slot: 20
+  material: SPLASH_POTION
+  potion: strong_healing
+- slot: 21
+  material: POTION
+  potion: strong_swiftness
+- slot: 22
+  material: POTION
+  potion: strong_swiftness
+- slot: 23
+  material: COBWEB
+  amount: 16
+- slot: 24
+  material: TRIDENT
+  enchantments:
+    impaling: 5
+    loyalty: 3
+    mending: 1
+    unbreaking: 3
+- slot: boots
+  material: NETHERITE_BOOTS
+  enchantments:
+    depth_strider: 3
+    feather_falling: 4
+    mending: 1
+    protection: 4
+    unbreaking: 3
+- slot: leggings
+  material: NETHERITE_LEGGINGS
+  enchantments:
+    mending: 1
+    protection: 4
+    unbreaking: 3
+- slot: chestplate
+  material: NETHERITE_CHESTPLATE
+  enchantments:
+    mending: 1
+    protection: 4
+    unbreaking: 3
+- slot: helmet
+  material: NETHERITE_HELMET
+  enchantments:
+    mending: 1
+    protection: 4
+    unbreaking: 3
+- slot: offhand
+  material: TOTEM_OF_UNDYING

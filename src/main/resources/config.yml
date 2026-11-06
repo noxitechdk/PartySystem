@@ -1,0 +1,229 @@
+# Gamemode spilleren får efter /party save (SURVIVAL, ADVENTURE, ...)
+kit-gamemode: SURVIVAL
+
+restock:
+  # REPLACE = erstat inventory, FILL = fyld kun op
+  mode: REPLACE
+  # Cooldown på /party restock i sekunder (60 = 1 minut, 0 = ingen cooldown).
+  # Cooldownen gemmes på spilleren, så den IKKE nulstilles ved /party leave og nyt kit-valg.
+  # Den gælder også når man vælger/skifter kit med /party kit <navn>.
+  # Spillere med permissionen partysystem.restock.nocooldown springer den over.
+  cooldown-seconds: 60
+  # true = /party save starter cooldownen, og man kan ikke gemme mens den kører.
+  # Det forhindrer at man omgår restock-cooldownen med leave -> kit -> save.
+  cooldown-on-save: true
+  # Drop items ved spilleren hvis de ikke kan være i inventory
+  drop-overflow: true
+
+# Spiller-partyer (/party create, /party invite ...)
+group:
+  # Maks. antal spillere i et party (inkl. lederen)
+  max-size: 8
+  # Hvor længe en invitation er gyldig, i sekunder
+  invite-expire-seconds: 60
+  # true = kun lederen kan invitere spillere
+  only-leader-invites: true
+  scoreboard:
+    # Vis et sidebar-scoreboard med partyets medlemmer.
+    # Sæt til false hvis TAB eller et andet plugin styrer dit scoreboard,
+    # og brug i stedet placeholders som %party_group_size% i det.
+    enabled: true
+
+# Match (/party start <kit>): sidste spiller i live vinder
+match:
+  # true = med kun 2 spillere kører runderne uendeligt, til nogen skriver /party leave (ignorerer antal runder)
+  two-player-endless: false
+  # Sekunder før kampen går i gang (ingen kan slå hinanden i mellemtiden)
+  countdown-seconds: 5
+  # Sekunder fra matchet er slut, til spillerne sendes tilbage
+  return-delay-seconds: 3
+  # Sekunder mellem runder
+  round-delay-seconds: 4
+  # Maks antal runder man kan vælge i menuen
+  max-rounds: 20
+  # true = skriv i konsollen hvorfor slag afvises, og hvornår runder/matches starter og slutter
+  debug: false
+  # true = slå PvP til i arenaens verden når et match starter (hvis den har PvP slået fra)
+  force-world-pvp: false
+
+kit:
+  # Afvis tomt kit ved save
+  reject-empty: true
+  filter:
+    # BLACKLIST eller WHITELIST
+    mode: BLACKLIST
+    materials:
+      - BEDROCK
+      - BARRIER
+      - LIGHT
+      - STRUCTURE_BLOCK
+      - STRUCTURE_VOID
+      - JIGSAW
+      - COMMAND_BLOCK
+      - CHAIN_COMMAND_BLOCK
+      - REPEATING_COMMAND_BLOCK
+      - COMMAND_BLOCK_MINECART
+      - DEBUG_STICK
+      - SPAWNER
+      - TRIAL_SPAWNER
+      - KNOWLEDGE_BOOK
+      - REINFORCED_DEEPSLATE
+      - END_PORTAL_FRAME
+    # Fjern shulker boxes, kister og bundles der indeholder items
+    remove-filled-containers: true
+  limits:
+    # Maks. antal items i alt (0 = ingen grænse)
+    max-total-items: 0
+    # Maks. antal pr. materiale
+    per-material:
+      TNT: 16
+      ENDER_PEARL: 16
+      GOLDEN_APPLE: 16
+      ENCHANTED_GOLDEN_APPLE: 4
+      END_CRYSTAL: 8
+      LAVA_BUCKET: 2
+  enchantments:
+    # false = nedskaler til vanilla maks-niveau
+    allow-unsafe: false
+    # Fjern enchantments der ikke kan bruges på itemet
+    remove-inapplicable: true
+    # Enchantment-nøgler der fjernes helt, f.eks. mending
+    blocked: []
+    # Egne maks-niveauer pr. enchantment, f.eks. sharpness: 3
+    max-levels: {}
+  strip:
+    custom-name: false
+    lore: false
+    custom-data: true
+
+time-limit:
+  enabled: false
+  seconds: 300
+  # SAVE = gem automatisk (forlad party hvis det ikke kan gemmes), LEAVE = forlad party
+  on-timeout: SAVE
+
+close:
+  # Send spillere ud når party lukkes
+  kick-players: true
+
+death:
+  clear-drops: true
+  give-kit-on-respawn: true
+
+# Regler for spillere der har fået deres kit (efter save/restock)
+kit-mode:
+  allow-pvp: true
+  # true = party-PvP tillades selvom en anden plugin (fx WorldGuard) har annulleret slaget
+  override-protection: true
+  allow-build: false
+  # Spillere kan placere blokke (og bryde dem de selv har placeret). Fjernes når de forlader party.
+  allow-place: true
+  # Må spillere droppe items (Q) i party? Droppede items fjernes når spilleren forlader party,
+  # og kan kun samles op af spillere i party. (Erstatter den gamle nøgle allow-drop.)
+  allow-item-drop: true
+
+commands:
+  # Kommandoer (uden /) der må bruges i party
+  whitelist:
+    - party
+    - pt
+
+# ===== Ranked / ELO =====
+# Bruges af matchmaking-køen (/party queue <kit>). Kampene er 1v1.
+ranked:
+  # false = køen virker stadig, men kampene giver ingen ELO eller stats
+  enabled: true
+  start-elo: 1000
+  min-elo: 0
+  # Hvor mange ELO-point en kamp kan flytte (højere = større udsving)
+  k-factor: 32
+  # De første kampe flytter mere, så nye spillere hurtigere finder deres niveau
+  placement-matches: 10
+  placement-k-factor: 48
+  # Antal runder i en ranked kamp (første til flest runder vinder, kampen stopper når en spiller har flertallet)
+  rounds: 3
+  # Dropper items når man dør i en ranked kamp
+  drop-items: false
+
+# ===== Matchmaking-kø =====
+queue:
+  enabled: true
+  # Hvor stor ELO-forskel der accepteres. Området vokser mens man venter.
+  elo-range:
+    initial: 100
+    expand-per-second: 10
+    # 0 = ingen grænse
+    max: 0
+  # Vis "søger modstander" i actionbaren mens man står i kø
+  actionbar: true
+
+# ===== Toplister (hologrammer) =====
+# Opret med /party hologram create <elo|wins|streak|kills> hvor du står.
+# Teksten herunder er MiniMessage og kan ændres frit. Brug /party reload bagefter.
+leaderboard:
+  # Hvor ofte toplisterne hentes fra databasen (sekunder)
+  refresh-seconds: 30
+  # Antal pladser der vises (maks. 50)
+  entries: 10
+  # Hvor meget højere end der hvor du stod hologrammet sættes (blokke). Ret den hvis det sidder for højt/lavt.
+  y-offset: 0.5
+  # Størrelse på teksten (1.0 = normal)
+  scale: 1.0
+  # FIXED, VERTICAL, HORIZONTAL eller CENTER (CENTER = vender altid mod spilleren)
+  billboard: CENTER
+  # default (Minecrafts baggrund), transparent, #RRGGBB eller #AARRGGBB
+  background: transparent
+  shadow: true
+  # Hvor langt væk man kan se hologrammet (1.0 = standard)
+  view-range: 1.0
+  line-width: 200
+  # Tilgængelige placeholders i alle linjer: <type> <entries> <refresh>
+  # I spillerlinjer også: <position> <player> <value> <elo> <peak_elo> <wins> <losses> <draws> <matches>
+  #   <winrate> <streak> <best_streak> <kills> <deaths> <kdr>
+  # line-1, line-2 og line-3 (valgfrie) overstyrer line for de tre første pladser.
+  # empty-line bruges til pladser ingen har endnu (<position>).
+  types:
+    elo:
+      header:
+        - "<gradient:#f5a623:#ffd166><bold>TOP ELO</bold></gradient>"
+        - "<gray>De bedste ranked spillere"
+        - ""
+      line: "<gray>#<position> <white><player> <dark_gray>» <yellow><value> ELO"
+      line-1: "<gold><bold>#<position></bold> <white><player> <dark_gray>» <gold><value> ELO"
+      line-2: "<#c0c0c0><bold>#<position></bold> <white><player> <dark_gray>» <#c0c0c0><value> ELO"
+      line-3: "<#cd7f32><bold>#<position></bold> <white><player> <dark_gray>» <#cd7f32><value> ELO"
+      empty-line: "<gray>#<position> <dark_gray>---"
+      footer:
+        - ""
+        - "<dark_gray>Opdateres hvert <refresh>. sekund"
+        - "<gray>Find en kamp med <yellow>/party queue"
+    wins:
+      header:
+        - "<gradient:#4ade80:#22c55e><bold>TOP SEJRE</bold></gradient>"
+        - "<gray>Flest ranked sejre"
+        - ""
+      line: "<gray>#<position> <white><player> <dark_gray>» <green><value> sejre"
+      empty-line: "<gray>#<position> <dark_gray>---"
+      footer:
+        - ""
+        - "<dark_gray>Opdateres hvert <refresh>. sekund"
+    streak:
+      header:
+        - "<gradient:#fb923c:#ef4444><bold>TOP WIN STREAK</bold></gradient>"
+        - "<gray>Længste række af sejre i træk"
+        - ""
+      line: "<gray>#<position> <white><player> <dark_gray>» <gold><value> i træk"
+      empty-line: "<gray>#<position> <dark_gray>---"
+      footer:
+        - ""
+        - "<dark_gray>Opdateres hvert <refresh>. sekund"
+    kills:
+      header:
+        - "<gradient:#f87171:#dc2626><bold>TOP KILLS</bold></gradient>"
+        - "<gray>Flest kills i ranked"
+        - ""
+      line: "<gray>#<position> <white><player> <dark_gray>» <red><value> kills"
+      empty-line: "<gray>#<position> <dark_gray>---"
+      footer:
+        - ""
+        - "<dark_gray>Opdateres hvert <refresh>. sekund"

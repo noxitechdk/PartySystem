@@ -1,0 +1,146 @@
+# Kit til /party kit spear-mace
+# Filnavnet (uden .yml) er kittets navn i kommandoen. Rediger frit - brug /party reload bagefter.
+#
+# slot: 0-8 = hotbar, 9-35 = inventory, eller helmet / chestplate / leggings / boots / offhand
+# material: Minecraft-material. fallback (valgfri) bruges hvis materialet ikke findes på serveren.
+# icon (valgfri): materiale der vises i /party menu. Uden icon bruges kittets første item.
+# amount, name og lore (MiniMessage), enchantments (navn: niveau), potion (fx strong_healing), unbreakable
+display-name: <gradient:#f5a623:#ff6b6b>Spear-Mace</gradient>
+icon: NETHERITE_SPEAR
+items:
+- slot: 0
+  material: NETHERITE_SWORD
+  enchantments:
+    sharpness: 5
+    unbreaking: 3
+- slot: 1
+  material: MACE
+  enchantments:
+    density: 5
+    unbreaking: 3
+    wind_burst: 1
+- slot: 2
+  material: NETHERITE_AXE
+  enchantments:
+    sharpness: 5
+    unbreaking: 3
+- slot: 3
+  material: WIND_CHARGE
+  amount: 64
+- slot: 4
+  material: ENDER_PEARL
+  amount: 16
+- slot: 5
+  material: COOKED_BEEF
+  amount: 64
+- slot: 6
+  material: GOLDEN_APPLE
+  amount: 64
+- slot: 7
+  material: NETHERITE_SPEAR
+  enchantments:
+    lunge: 3
+    sharpness: 5
+    unbreaking: 3
+- slot: 8
+  material: SHIELD
+  enchantments:
+    unbreaking: 3
+- slot: 9
+  material: WIND_CHARGE
+  amount: 64
+- slot: 10
+  material: ENDER_PEARL
+  amount: 16
+- slot: 11
+  material: SHULKER_BOX
+- slot: 12
+  material: SPLASH_POTION
+  potion: strong_strength
+- slot: 13
+  material: TOTEM_OF_UNDYING
+- slot: 14
+  material: SPLASH_POTION
+  potion: strong_strength
+- slot: 15
+  material: SPLASH_POTION
+  potion: strong_swiftness
+- slot: 16
+  material: SPLASH_POTION
+  potion: strong_strength
+- slot: 17
+  material: SPLASH_POTION
+  potion: strong_swiftness
+- slot: 18
+  material: WIND_CHARGE
+  amount: 64
+- slot: 19
+  material: ENDER_PEARL
+  amount: 16
+- slot: 20
+  material: SPLASH_POTION
+  potion: strong_swiftness
+- slot: 21
+  material: SPLASH_POTION
+  potion: strong_strength
+- slot: 22
+  material: SPLASH_POTION
+  potion: strong_swiftness
+- slot: 23
+  material: SPLASH_POTION
+  potion: strong_strength
+- slot: 24
+  material: SPLASH_POTION
+  potion: strong_swiftness
+- slot: 25
+  material: SPLASH_POTION
+  potion: strong_strength
+- slot: 26
+  material: SPLASH_POTION
+  potion: strong_swiftness
+- slot: 27
+  material: WIND_CHARGE
+  amount: 64
+- slot: 28
+  material: SPLASH_POTION
+  potion: strong_strength
+- slot: 29
+  material: SPLASH_POTION
+  potion: strong_swiftness
+- slot: 30
+  material: SPLASH_POTION
+  potion: strong_strength
+- slot: 31
+  material: SPLASH_POTION
+  potion: strong_swiftness
+- slot: 32
+  material: SPLASH_POTION
+  potion: strong_strength
+- slot: 33
+  material: SPLASH_POTION
+  potion: strong_swiftness
+- slot: 34
+  material: SPLASH_POTION
+  potion: strong_strength
+- slot: 35
+  material: SPLASH_POTION
+  potion: strong_swiftness
+- slot: boots
+  material: NETHERITE_BOOTS
+  enchantments:
+    feather_falling: 4
+    protection: 4
+- slot: leggings
+  material: NETHERITE_LEGGINGS
+  enchantments:
+    protection: 4
+- slot: chestplate
+  material: NETHERITE_CHESTPLATE
+  enchantments:
+    protection: 4
+- slot: helmet
+  material: NETHERITE_HELMET
+  enchantments:
+    protection: 4
+- slot: offhand
+  material: TOTEM_OF_UNDYING

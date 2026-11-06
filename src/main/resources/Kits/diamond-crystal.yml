@@ -1,0 +1,151 @@
+# Kit til /party kit diamond-crystal
+# Filnavnet (uden .yml) er kittets navn i kommandoen. Rediger frit - brug /party reload bagefter.
+#
+# slot: 0-8 = hotbar, 9-35 = inventory, eller helmet / chestplate / leggings / boots / offhand
+# material: Minecraft-material. fallback (valgfri) bruges hvis materialet ikke findes på serveren.
+# icon (valgfri): materiale der vises i /party menu. Uden icon bruges kittets første item.
+# amount, name og lore (MiniMessage), enchantments (navn: niveau), potion (fx strong_healing), unbreakable
+display-name: "<aqua>Diamond Crystal"
+icon: END_CRYSTAL
+items:
+- slot: 0
+  material: DIAMOND_SWORD
+  enchantments:
+    knockback: 1
+    sharpness: 5
+    sweeping_edge: 3
+    unbreaking: 1
+- slot: 1
+  material: END_CRYSTAL
+  amount: 64
+- slot: 2
+  material: OBSIDIAN
+  amount: 64
+- slot: 3
+  material: GOLDEN_APPLE
+  amount: 64
+- slot: 4
+  material: ENDER_PEARL
+  amount: 16
+- slot: 5
+  material: TOTEM_OF_UNDYING
+- slot: 6
+  material: CROSSBOW
+  enchantments:
+    multishot: 1
+    quick_charge: 3
+    unbreaking: 3
+- slot: 7
+  material: GLOWSTONE
+  amount: 64
+- slot: 8
+  material: RESPAWN_ANCHOR
+  amount: 64
+- slot: 9
+  material: ENDER_PEARL
+  amount: 16
+- slot: 10
+  material: ENDER_PEARL
+  amount: 16
+- slot: 11
+  material: TOTEM_OF_UNDYING
+- slot: 12
+  material: TOTEM_OF_UNDYING
+- slot: 13
+  material: TOTEM_OF_UNDYING
+- slot: 14
+  material: TOTEM_OF_UNDYING
+- slot: 15
+  material: TOTEM_OF_UNDYING
+- slot: 16
+  material: TOTEM_OF_UNDYING
+- slot: 17
+  material: DIAMOND_AXE
+  enchantments:
+    efficiency: 5
+    mending: 1
+    sharpness: 5
+    unbreaking: 3
+- slot: 18
+  material: ENDER_PEARL
+  amount: 16
+- slot: 19
+  material: ENDER_PEARL
+  amount: 16
+- slot: 20
+  material: TOTEM_OF_UNDYING
+- slot: 21
+  material: TOTEM_OF_UNDYING
+- slot: 22
+  material: TOTEM_OF_UNDYING
+- slot: 23
+  material: TOTEM_OF_UNDYING
+- slot: 24
+  material: TOTEM_OF_UNDYING
+- slot: 25
+  material: TOTEM_OF_UNDYING
+- slot: 26
+  material: DIAMOND_PICKAXE
+  enchantments:
+    efficiency: 5
+    mending: 1
+    unbreaking: 3
+- slot: 27
+  material: ENDER_PEARL
+  amount: 16
+- slot: 28
+  material: ENDER_PEARL
+  amount: 16
+- slot: 29
+  material: GOLDEN_APPLE
+  amount: 64
+- slot: 30
+  material: OBSIDIAN
+  amount: 64
+- slot: 31
+  material: END_CRYSTAL
+  amount: 64
+- slot: 32
+  material: EXPERIENCE_BOTTLE
+  amount: 64
+- slot: 33
+  material: EXPERIENCE_BOTTLE
+  amount: 64
+- slot: 34
+  material: TIPPED_ARROW
+  amount: 64
+  potion: long_slow_falling
+- slot: 35
+  material: SHIELD
+  enchantments:
+    mending: 1
+    unbreaking: 3
+- slot: boots
+  material: DIAMOND_BOOTS
+  enchantments:
+    depth_strider: 3
+    feather_falling: 4
+    mending: 1
+    protection: 4
+    unbreaking: 3
+- slot: leggings
+  material: DIAMOND_LEGGINGS
+  enchantments:
+    blast_protection: 4
+    mending: 1
+    swift_sneak: 3
+    unbreaking: 3
+- slot: chestplate
+  material: DIAMOND_CHESTPLATE
+  enchantments:
+    mending: 1
+    protection: 4
+    unbreaking: 3
+- slot: helmet
+  material: DIAMOND_HELMET
+  enchantments:
+    mending: 1
+    protection: 4
+    unbreaking: 3
+- slot: offhand
+  material: TOTEM_OF_UNDYING

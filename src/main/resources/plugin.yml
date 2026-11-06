@@ -1,0 +1,27 @@
+name: PartySystem
+version: 1.5.0
+main: dk.blockcraft.partysystem.PartySystem
+api-version: "1.21"
+authors: [BlockCraft]
+description: Spillere bygger deres eget kit eller vælger et forudlavet kit (Kits-mappen) og kan restocke det igen og igen.
+softdepend: [PlaceholderAPI]
+
+commands:
+  party:
+    description: Party-kommandoer
+    usage: /<command> help
+    aliases: [pt]
+
+permissions:
+  partysystem.use:
+    description: Brug af spiller-kommandoer
+    default: true
+  partysystem.admin:
+    description: Brug af admin-kommandoer
+    default: op
+  partysystem.restock.nocooldown:
+    description: Ingen cooldown på restock
+    default: op
+  partysystem.command.bypass:
+    description: Må bruge alle kommandoer i party
+    default: op

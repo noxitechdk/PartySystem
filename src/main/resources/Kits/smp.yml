@@ -1,0 +1,126 @@
+# Kit til /party kit smp
+# Filnavnet (uden .yml) er kittets navn i kommandoen. Rediger frit - brug /party reload bagefter.
+#
+# slot: 0-8 = hotbar, 9-35 = inventory, eller helmet / chestplate / leggings / boots / offhand
+# material: Minecraft-material. fallback (valgfri) bruges hvis materialet ikke findes på serveren.
+# amount, name og lore (MiniMessage), enchantments (navn: niveau), potion (fx strong_healing), unbreakable
+display-name: "<dark_red>SMP"
+items:
+- slot: 0
+  material: NETHERITE_SWORD
+  enchantments:
+    fire_aspect: 2
+    mending: 1
+    sharpness: 5
+    sweeping_edge: 3
+    unbreaking: 3
+- slot: 1
+  material: NETHERITE_AXE
+  enchantments:
+    efficiency: 5
+    mending: 1
+    sharpness: 5
+    unbreaking: 3
+- slot: 2
+  material: BOW
+  enchantments:
+    infinity: 1
+    mending: 1
+    power: 5
+    unbreaking: 3
+- slot: 3
+  material: ENDER_PEARL
+  amount: 16
+- slot: 4
+  material: ENCHANTED_GOLDEN_APPLE
+  amount: 8
+- slot: 5
+  material: GOLDEN_APPLE
+  amount: 64
+- slot: 6
+  material: WATER_BUCKET
+- slot: 7
+  material: COBWEB
+  amount: 16
+- slot: 8
+  material: SHIELD
+  enchantments:
+    mending: 1
+    unbreaking: 3
+- slot: 9
+  material: ENDER_PEARL
+  amount: 16
+- slot: 10
+  material: ENDER_PEARL
+  amount: 16
+- slot: 11
+  material: TOTEM_OF_UNDYING
+- slot: 12
+  material: TOTEM_OF_UNDYING
+- slot: 13
+  material: TOTEM_OF_UNDYING
+- slot: 14
+  material: TOTEM_OF_UNDYING
+- slot: 15
+  material: TOTEM_OF_UNDYING
+- slot: 16
+  material: TOTEM_OF_UNDYING
+- slot: 17
+  material: ARROW
+  amount: 64
+- slot: 18
+  material: COOKED_BEEF
+  amount: 64
+- slot: 19
+  material: SPLASH_POTION
+  potion: strong_healing
+- slot: 20
+  material: SPLASH_POTION
+  potion: strong_healing
+- slot: 21
+  material: SPLASH_POTION
+  potion: strong_healing
+- slot: 22
+  material: POTION
+  potion: strong_swiftness
+- slot: 23
+  material: POTION
+  potion: strong_swiftness
+- slot: 24
+  material: EXPERIENCE_BOTTLE
+  amount: 64
+- slot: 35
+  material: NETHERITE_PICKAXE
+  enchantments:
+    efficiency: 5
+    mending: 1
+    unbreaking: 3
+- slot: boots
+  material: NETHERITE_BOOTS
+  enchantments:
+    feather_falling: 4
+    mending: 1
+    protection: 4
+    unbreaking: 3
+- slot: leggings
+  material: NETHERITE_LEGGINGS
+  enchantments:
+    mending: 1
+    protection: 4
+    unbreaking: 3
+- slot: chestplate
+  material: NETHERITE_CHESTPLATE
+  enchantments:
+    mending: 1
+    protection: 4
+    unbreaking: 3
+- slot: helmet
+  material: NETHERITE_HELMET
+  enchantments:
+    aqua_affinity: 1
+    mending: 1
+    protection: 4
+    respiration: 3
+    unbreaking: 3
+- slot: offhand
+  material: TOTEM_OF_UNDYING

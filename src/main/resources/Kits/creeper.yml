@@ -1,0 +1,129 @@
+# Kit til /party kit creeper
+# Filnavnet (uden .yml) er kittets navn i kommandoen. Rediger frit - brug /party reload bagefter.
+#
+# slot: 0-8 = hotbar, 9-35 = inventory, eller helmet / chestplate / leggings / boots / offhand
+# material: Minecraft-material. fallback (valgfri) bruges hvis materialet ikke findes på serveren.
+# icon (valgfri): materiale der vises i /party menu. Uden icon bruges kittets første item.
+# amount, name og lore (MiniMessage), enchantments (navn: niveau), potion (fx strong_healing), unbreakable
+display-name: "<green>Creeper"
+icon: CREEPER_HEAD
+items:
+- slot: 0
+  material: NETHERITE_SWORD
+  enchantments:
+    mending: 1
+    sharpness: 5
+    unbreaking: 3
+- slot: 1
+  material: NETHERITE_AXE
+  enchantments:
+    efficiency: 5
+    mending: 1
+    sharpness: 5
+    unbreaking: 3
+- slot: 2
+  material: CREEPER_SPAWN_EGG
+  amount: 64
+- slot: 3
+  material: FLINT_AND_STEEL
+- slot: 4
+  material: BOW
+  enchantments:
+    flame: 1
+    infinity: 1
+    mending: 1
+    power: 5
+    unbreaking: 3
+- slot: 5
+  material: ENDER_PEARL
+  amount: 16
+- slot: 6
+  material: GOLDEN_APPLE
+  amount: 64
+- slot: 7
+  material: WATER_BUCKET
+- slot: 8
+  material: SHIELD
+  enchantments:
+    mending: 1
+    unbreaking: 3
+- slot: 9
+  material: CREEPER_SPAWN_EGG
+  amount: 64
+- slot: 10
+  material: CREEPER_SPAWN_EGG
+  amount: 64
+- slot: 11
+  material: FLINT_AND_STEEL
+- slot: 12
+  material: ARROW
+  amount: 64
+- slot: 13
+  material: ENDER_PEARL
+  amount: 16
+- slot: 14
+  material: ENDER_PEARL
+  amount: 16
+- slot: 15
+  material: COBWEB
+  amount: 16
+- slot: 16
+  material: TOTEM_OF_UNDYING
+- slot: 17
+  material: TOTEM_OF_UNDYING
+- slot: 18
+  material: TOTEM_OF_UNDYING
+- slot: 19
+  material: TOTEM_OF_UNDYING
+- slot: 20
+  material: TOTEM_OF_UNDYING
+- slot: 21
+  material: COOKED_BEEF
+  amount: 64
+- slot: 22
+  material: ENCHANTED_GOLDEN_APPLE
+  amount: 8
+- slot: 23
+  material: SPLASH_POTION
+  potion: strong_healing
+- slot: 24
+  material: SPLASH_POTION
+  potion: strong_healing
+- slot: 25
+  material: SPLASH_POTION
+  potion: strong_healing
+- slot: 26
+  material: POTION
+  potion: strong_swiftness
+- slot: 27
+  material: CREEPER_SPAWN_EGG
+  amount: 64
+- slot: 28
+  material: WATER_BUCKET
+- slot: boots
+  material: NETHERITE_BOOTS
+  enchantments:
+    blast_protection: 4
+    feather_falling: 4
+    mending: 1
+    unbreaking: 3
+- slot: leggings
+  material: NETHERITE_LEGGINGS
+  enchantments:
+    blast_protection: 4
+    mending: 1
+    unbreaking: 3
+- slot: chestplate
+  material: NETHERITE_CHESTPLATE
+  enchantments:
+    blast_protection: 4
+    mending: 1
+    unbreaking: 3
+- slot: helmet
+  material: NETHERITE_HELMET
+  enchantments:
+    blast_protection: 4
+    mending: 1
+    unbreaking: 3
+- slot: offhand
+  material: TOTEM_OF_UNDYING

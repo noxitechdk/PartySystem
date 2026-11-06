@@ -1,0 +1,76 @@
+# Kit til /party kit uhc
+# Filnavnet (uden .yml) er kittets navn i kommandoen. Rediger frit - brug /party reload bagefter.
+#
+# slot: 0-8 = hotbar, 9-35 = inventory, eller helmet / chestplate / leggings / boots / offhand
+# material: Minecraft-material. fallback (valgfri) bruges hvis materialet ikke findes på serveren.
+# amount, name og lore (MiniMessage), enchantments (navn: niveau), potion (fx strong_healing), unbreakable
+display-name: <green>UHC
+items:
+- slot: 0
+  material: DIAMOND_SWORD
+  enchantments:
+    sharpness: 3
+- slot: 1
+  material: DIAMOND_AXE
+  enchantments:
+    efficiency: 3
+- slot: 2
+  material: GOLDEN_APPLE
+  amount: 16
+- slot: 3
+  material: ENCHANTED_GOLDEN_APPLE
+- slot: 4
+  material: WATER_BUCKET
+- slot: 5
+  material: LAVA_BUCKET
+- slot: 6
+  material: OAK_PLANKS
+  amount: 64
+- slot: 7
+  material: CROSSBOW
+  enchantments:
+    piercing: 1
+- slot: 8
+  material: COBWEB
+  amount: 8
+- slot: 9
+  material: ARROW
+  amount: 10
+- slot: 12
+  material: WATER_BUCKET
+- slot: 13
+  material: WATER_BUCKET
+- slot: 14
+  material: WATER_BUCKET
+- slot: 17
+  material: OAK_PLANKS
+  amount: 64
+- slot: 21
+  material: DIAMOND_PICKAXE
+  enchantments:
+    efficiency: 2
+    unbreaking: 1
+- slot: 22
+  material: LAVA_BUCKET
+- slot: 26
+  material: BOW
+  enchantments:
+    power: 1
+- slot: boots
+  material: DIAMOND_BOOTS
+  enchantments:
+    protection: 3
+- slot: leggings
+  material: DIAMOND_LEGGINGS
+  enchantments:
+    protection: 2
+- slot: chestplate
+  material: DIAMOND_CHESTPLATE
+  enchantments:
+    protection: 2
+- slot: helmet
+  material: DIAMOND_HELMET
+  enchantments:
+    protection: 3
+- slot: offhand
+  material: SHIELD

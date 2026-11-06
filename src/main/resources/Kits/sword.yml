@@ -1,0 +1,32 @@
+# Kit til /party kit sword
+# Filnavnet (uden .yml) er kittets navn i kommandoen. Rediger frit - brug /party reload bagefter.
+#
+# slot: 0-8 = hotbar, 9-35 = inventory, eller helmet / chestplate / leggings / boots / offhand
+# material: Minecraft-material. fallback (valgfri) bruges hvis materialet ikke findes på serveren.
+# amount, name og lore (MiniMessage), enchantments (navn: niveau), potion (fx strong_healing), unbreakable
+display-name: <aqua>Sword
+items:
+- slot: 0
+  material: DIAMOND_SWORD
+  enchantments:
+    unbreaking: 3
+- slot: boots
+  material: DIAMOND_BOOTS
+  enchantments:
+    protection: 3
+    unbreaking: 3
+- slot: leggings
+  material: DIAMOND_LEGGINGS
+  enchantments:
+    protection: 3
+    unbreaking: 3
+- slot: chestplate
+  material: DIAMOND_CHESTPLATE
+  enchantments:
+    protection: 3
+    unbreaking: 3
+- slot: helmet
+  material: DIAMOND_HELMET
+  enchantments:
+    protection: 4
+    unbreaking: 3

@@ -1,0 +1,29 @@
+# Kit til /party kit axe
+# Filnavnet (uden .yml) er kittets navn i kommandoen. Rediger frit - brug /party reload bagefter.
+#
+# slot: 0-8 = hotbar, 9-35 = inventory, eller helmet / chestplate / leggings / boots / offhand
+# material: Minecraft-material. fallback (valgfri) bruges hvis materialet ikke findes på serveren.
+# icon (valgfri): materiale der vises i /party menu. Uden icon bruges kittets første item.
+# amount, name og lore (MiniMessage), enchantments (navn: niveau), potion (fx strong_healing), unbreakable
+display-name: <gold>Axe
+icon: NETHERITE_AXE
+items:
+- slot: 0
+  material: DIAMOND_SWORD
+- slot: 1
+  material: DIAMOND_AXE
+- slot: 2
+  material: CROSSBOW
+- slot: 3
+  material: BOW
+- slot: 4
+  material: ARROW
+  amount: 6
+- slot: boots
+  material: DIAMOND_BOOTS
+- slot: leggings
+  material: DIAMOND_LEGGINGS
+- slot: chestplate
+  material: DIAMOND_CHESTPLATE
+- slot: helmet
+  material: DIAMOND_HELMET
